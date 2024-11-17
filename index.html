@@ -46,40 +46,41 @@
             </div>
             <h2><span>Skills</span></h2>
             <div class="skills">
-                <ul>
-                    <li>
+                <ul class="skills-list">
+                    <li class="skill-pop" data-skill="HTML" data-level="90%">
                         <span><i class='bx bx-right-arrow'></i>
                             HTML
                         </span>
                     </li>
-                    <li>
+                    <li class="skill-pop" data-skill="CSS" data-level="65%">
                         <span><i class='bx bx-right-arrow'></i>
                             CSS
                         </span>
                     </li>
-                    <li>
+                    <li class="skill-pop" data-skill="JavaScript" data-level="20%">
                         <span><i class='bx bx-right-arrow'></i>
                             JAVASCRIPT
                         </span>
                     </li>
                 </ul>
-                <ul>
-                    <li>
+                <ul class="skills-list">
+                    <li class="skill-pop" data-skill="Python" data-level="70%">
                         <span><i class='bx bx-right-arrow'></i>
                             PYTHON
                         </span>
                     </li>
-                    <li>
+                    <li class="skill-pop" data-skill="C++" data-level="10%">
                         <span><i class='bx bx-right-arrow'></i>
                             C++
                         </span>
                     </li>
-                    <li>
+                    <li class="skill-pop" data-skill="MySQL" data-level="10%">
                         <span><i class='bx bx-right-arrow'></i>
                             MYSQL
                         </span>
                     </li>
                 </ul>
+                <div id="skill-popup"></div>
             </div>
         </div>
         <img src="face.jpg" alt="">
@@ -142,22 +143,14 @@
     <section id="contact">
         <h1 class="header"><span>Contact</span></h1>
 
-        <form action="#">
-            <div class="input-box">
-                <span>Full Name</span>
-                <input type="text" placeholder="Enter your Full Name">
-            </div>
-
-            <div class="input-box">
-                <span>Email Id</span>
-                <input type="email" placeholder="Enter your Email Id">
-            </div>
-
-            <div class="input-box">
-                <span>Your message</span>
-                <input type="text" placeholder="Enter your message ">
-            </div>
-            <div class="btn">Submit</div>
+        <form id="myForm">
+            <label for="name"><span class="formtext">Name</span></label>
+            <input type="text" id="name" name="name" required placeholder="Enter your message">
+            <label for="email"><span class="formtext">Email</span></label>
+            <input type="email" id="email" name="email" required placeholder="Enter your message">
+            <label for="message"><span class="formtext">Your message</span></label>
+            <input type="text" id="text" name="text" placeholder="Enter your message " required>
+            <div class="btn" onclick="submitForm()">Submit</div>
         </form>
     </section>
     <footer>
