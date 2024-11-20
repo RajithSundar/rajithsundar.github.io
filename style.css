@@ -587,20 +587,3 @@
    .formtext{
      font-size: larger;
    }
-a:link {
-    color: #AFADA9;
-    text-decoration: none; 
-}
-
-a:visited {
-    color: inherit; 
-}
-
-a:hover {
-    color: #007bff;
-    text-decoration: none; 
-}
-
-a:active {
-    color: #0056b3;
-}
