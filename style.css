@@ -28,6 +28,10 @@
      min-height: 100vh;
      background-color: var(--background);
  }
+body.skill1-page {
+     min-height: 100vh;
+     background-color: var(--second-background);
+}
  nav{
      position: fixed;
      top: 0;
