@@ -587,3 +587,12 @@
    .formtext{
      font-size: larger;
    }
+a:link, a:visited {
+    color: #AFADA9; 
+    text-decoration: none; 
+}
+
+a:hover, a:focus, a:active {
+    color: #AFADA9;
+    text-decoration: none;
+}
