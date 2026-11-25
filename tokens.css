@@ -1,0 +1,85 @@
+:root {
+  /* Spacing scale */
+  --space-3xs: 2px;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+  --space-4xl: 144px;
+
+  /* Enlarged, generous type scale (uncommon ITF faces, slightly bigger across all roles) */
+  --text-xs: 0.9375rem;
+  --text-sm: 1rem;
+  --text-md: 1.1875rem;
+  --text-lg: 1.375rem;
+  --text-xl: 1.6875rem;
+  --text-2xl: 2.125rem;
+  --text-3xl: 2.625rem;
+  --text-display-s: clamp(2.4rem, 3.6vw + 0.85rem, 3.9rem);
+  --text-display: clamp(2.85rem, 4.3vw + 0.9rem, 4.75rem);
+  --text-section: clamp(2.35rem, 3vw + 1rem, 3.65rem);
+  --text-title: clamp(1.45rem, 0.85vw + 1.1rem, 1.95rem);
+  --text-lead: clamp(1.25rem, 0.5vw + 1.05rem, 1.5625rem);
+
+  /* Motion & curves */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+
+  /* Canvas & z-index ladder */
+  --container: 1440px;
+  --gutter: 64px;
+  --gap-columns: 32px;
+  --section-gap-s: 120px;
+  --section-gap: 144px;
+  --section-gap-l: 176px;
+  --z-base: 1;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-sticky-nav: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+
+  /* Cool mineral pewter paper + deep botanical spruce signal (OKLCH) */
+  --color-paper: oklch(96.2% 0.009 205);
+  --color-paper-2: oklch(92.6% 0.012 205);
+  --color-paper-3: oklch(88.6% 0.015 205);
+  --color-ink: oklch(18% 0.018 205);
+  --color-ink-2: oklch(32.5% 0.016 205);
+  --color-muted: oklch(43% 0.015 205);
+  --color-rule: oklch(81.5% 0.014 205);
+  --color-accent: oklch(39.5% 0.115 158);
+  --color-accent-ink: oklch(97.5% 0.006 205);
+  --color-focus: oklch(42% 0.145 158);
+  --color-error: oklch(50% 0.18 27);
+  --color-success: oklch(45% 0.12 155);
+
+  /* Uncommon Indian Type Foundry trio: Erode (display), Supreme (body), Panchang (outlier wordmark) */
+  --font-display: "Erode", Georgia, serif;
+  --font-body: "Supreme", system-ui, -apple-system, sans-serif;
+  --font-outlier: "Panchang", system-ui, sans-serif;
+
+  /* Radii & surfaces */
+  --radius-card: 6px;
+  --radius-input: 6px;
+  --radius-pill: 999px;
+  --rule-hair: 1px;
+  --shadow-card: 0 1px 2px oklch(18% 0.018 205 / 0.05);
+  --tracking-display: -0.025em;
+}
+
+@media (max-width: 40rem) {
+  :root {
+    --text-md: 1.0625rem;
+    --text-sm: 0.9375rem;
+  }
+}

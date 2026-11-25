@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rajith Sundar, Backend and Applied AI Engineer</title>
+  <meta name="description" content="Engineering portfolio of Rajith Sundar: Java 21 financial ledgers, multi-agent LangGraph retrieval systems, and atmospheric data software.">
+  <meta name="theme-color" content="#f1f4f5">
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=erode@600&f[]=supreme@400,500&f[]=panchang@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="wordmark" href="#main" aria-label="Rajith Sundar home">Rajith Sundar</a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="#work">Work</a></li>
+          <li class="hide-phone"><a href="#experience">Experience</a></li>
+          <li class="hide-phone"><a href="#credentials">Credentials</a></li>
+          <li><a class="btn btn--quiet" href="./assets/Rajith_Sundar_Resume.pdf">Read resume</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="intro-title">
+      <div class="container intro-grid">
+        <div class="intro-copy">
+          <h1 id="intro-title" data-reveal style="--i: 0">Java ledgers and applied AI.</h1>
+          <p class="lead" data-reveal style="--i: 1">Rajith Sundar builds financial backends, multi-agent retrieval, and public data software.</p>
+          <div class="intro-actions" data-reveal style="--i: 2">
+            <a class="btn" href="mailto:rajithsundarpillai@gmail.com">Email Rajith</a>
+            <a class="btn btn--quiet" href="https://github.com/RajithSundar">Open GitHub</a>
+          </div>
+        </div>
+        <figure class="intro-portrait" data-slot="portrait" data-alt="Portrait of Rajith Sundar outdoors in sunlit foliage" data-reveal style="--i: 3">
+          <img src="./assets/face.jpg" width="1502" height="1502" alt="Rajith Sundar outdoors in sunlight" fetchpriority="high">
+        </figure>
+      </div>
+    </section>
+
+    <section id="work" class="band-stone" aria-labelledby="work-title">
+      <div class="container">
+        <div class="switcher-bar">
+          <h2 id="work-title">Shipped interfaces in public code.</h2>
+          <div class="tablist" role="tablist" aria-label="Featured software">
+            <button class="tab-btn" role="tab" type="button" id="tab-aeroscope" aria-selected="true" aria-controls="panel-aeroscope">AeroScope</button>
+            <button class="tab-btn" role="tab" type="button" id="tab-vogue" aria-selected="false" aria-controls="panel-vogue" tabindex="-1">Vogue Trends</button>
+          </div>
+        </div>
+
+        <div class="case-panel" role="tabpanel" id="panel-aeroscope" aria-labelledby="tab-aeroscope">
+          <figure class="case-screen" data-slot="aeroscope-screen" data-alt="AeroScope web interface mapping smog seasons across 131 Indian cities">
+            <img src="./assets/aeroscope.png" width="2880" height="1800" alt="" loading="lazy">
+          </figure>
+          <div class="case-details">
+            <h3>AeroScope</h3>
+            <p>Clusters three years of Copernicus CAMS, ERA5 wind, and NASA fire detections across India’s 131 NCAP cities into month-by-month municipal smog calendars.</p>
+            <p class="repo-stack">Python, Copernicus CAMS, ERA5, Static Web</p>
+            <div class="case-links">
+              <a class="text-link" href="https://github.com/RajithSundar/aeroscope">Open AeroScope repository</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-panel" role="tabpanel" id="panel-vogue" aria-labelledby="tab-vogue">
+          <figure class="case-screen" data-slot="vogue-screen" data-alt="Vogue Trends storefront showing the Gemini styling assistant">
+            <img src="./assets/vogue-trends.png" width="2880" height="1800" alt="" loading="lazy">
+          </figure>
+          <div class="case-details">
+            <h3>Vogue Trends</h3>
+            <p>Full-stack storefront pairing catalog search, persistent cart state, and JWT inventory analytics with an outfit stylist powered by Gemini 2.5 Flash.</p>
+            <p class="repo-stack">React, Node.js, Express, MongoDB, Gemini API</p>
+            <div class="case-links">
+              <a class="text-link" href="https://vogue-trends.vercel.app/">Open live storefront</a>
+              <a class="text-link" href="https://github.com/RajithSundar/Vogue-Trends">Open Vogue Trends repository</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-ledger" aria-labelledby="repos-title">
+      <div class="container">
+        <div class="head-split">
+          <h2 id="repos-title">Four more public repositories.</h2>
+          <p class="lead">Banking ledgers, agent graphs, invariant checks, and OS authentication.</p>
+        </div>
+
+        <table class="repo-table">
+          <thead>
+            <tr>
+              <th scope="col">Project</th>
+              <th scope="col">System</th>
+              <th scope="col">Stack</th>
+              <th scope="col">Code</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>AgentOne</td>
+              <td>Stateful LangGraph engine with hybrid RRF retrieval and PII masking.</td>
+              <td class="repo-stack">Python, FastAPI</td>
+              <td><a class="text-link" href="https://github.com/RajithSundar/AgentOne">Open source</a></td>
+            </tr>
+            <tr>
+              <td>Englo Studio</td>
+              <td>Extracts formal ledger invariants from prose and stress-tests topologies.</td>
+              <td class="repo-stack">TypeScript, Gemini</td>
+              <td><a class="text-link" href="https://github.com/RajithSundar/Englo">Open source</a></td>
+            </tr>
+            <tr>
+              <td>FinTrack Pro</td>
+              <td>Double-entry banking ledger with optimistic locking and atomic transfers.</td>
+              <td class="repo-stack">Java 21, Spring Boot</td>
+              <td><a class="text-link" href="https://github.com/RajithSundar/Java">Open source</a></td>
+            </tr>
+            <tr>
+              <td>SecureAuth</td>
+              <td>RFC 6238 authenticator with lockout rules and Windows credential provider.</td>
+              <td class="repo-stack">C++, Python</td>
+              <td><a class="text-link" href="https://github.com/RajithSundar/SecureAuthProject">Open source</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="experience" class="section-experience" aria-labelledby="exp-title">
+      <div class="container">
+        <div class="head-stack">
+          <h2 id="exp-title">Work and study.</h2>
+        </div>
+        <div class="exp-list">
+          <article class="exp-item">
+            <div class="exp-meta">
+              <h3>Handshake</h3>
+              <time datetime="2026-07">July 2026 to present</time>
+            </div>
+            <p class="exp-role">AI Trainer and Team Reviewer</p>
+            <div class="exp-body">
+              <p>Reviewed Java, Python, and SQL implementations at a 98% acceptance rate across 20 reviewers.</p>
+            </div>
+          </article>
+          <article class="exp-item">
+            <div class="exp-meta">
+              <h3>Infosys Springboard</h3>
+              <time datetime="2026-02">February to April 2026</time>
+            </div>
+            <p class="exp-role">Engineer Intern</p>
+            <div class="exp-body">
+              <p>Built <a class="text-link" href="https://github.com/RajithSundar/SwiftRAG">SwiftVisa AI</a> in LangGraph and ChromaDB, cutting policy checks by 40%.</p>
+            </div>
+          </article>
+          <article class="exp-item">
+            <div class="exp-meta">
+              <h3>Lovely Professional University</h3>
+              <time datetime="2024-08">2024 to 2028</time>
+            </div>
+            <p class="exp-role">B.Tech CSE (AI and ML)</p>
+            <div class="exp-body">
+              <p>Undergraduate specialization in artificial intelligence, backend architecture, and relational databases in Punjab.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="credentials" class="band-stone" aria-labelledby="cred-title">
+      <div class="container">
+        <div class="head-stack">
+          <h2 id="cred-title">Verified record and credentials.</h2>
+        </div>
+        <div class="stats-row">
+          <div class="stats-item">
+            <span class="stats-figure">9.06</span>
+            <p class="stats-desc">Cumulative GPA out of 10 across Computer Science and AI coursework.</p>
+          </div>
+          <div class="stats-item">
+            <span class="stats-figure">500+</span>
+            <p class="stats-desc">Multi-step LLM function-calling traces evaluated and stress-tested at Handshake.</p>
+          </div>
+          <div class="stats-item">
+            <span class="stats-figure">C2</span>
+            <p class="stats-desc">Cambridge English Proficiency, alongside 2026 Oracle Cloud AI and AWS credentials.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-statement">
+        <h2>Open to backend and applied AI engineering roles.</h2>
+        <div class="footer-actions">
+          <a class="text-link" href="mailto:rajithsundarpillai@gmail.com">rajithsundarpillai@gmail.com</a>
+          <a class="text-link" href="./assets/Rajith_Sundar_Resume.pdf">Download 1-page PDF resume</a>
+        </div>
+      </div>
+      <div class="footer-mast">
+        <span class="wordmark">Rajith Sundar</span>
+        <ul class="footer-links">
+          <li><a href="https://github.com/RajithSundar">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/rajith-sundar/">LinkedIn</a></li>
+          <li><span>Punjab, India</span></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.hallmarkSlots = (m) => {
+      for (const [k, v] of Object.entries(m)) {
+        const s = document.querySelector(`[data-slot="${k}"]`);
+        if (!s) continue;
+        const im = new Image();
+        im.src = typeof v === 'string' ? v : v.src;
+        im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || '';
+        s.querySelectorAll(':scope > img').forEach((o) => o.remove());
+        s.prepend(im);
+      }
+    };
+    document.querySelectorAll('[data-slot] img').forEach((i) => {
+      if (i.complete && !i.naturalWidth) i.remove();
+      else i.addEventListener('error', () => i.remove(), { once: true });
+    });
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -5% 0px' });
+    document.querySelectorAll('[data-reveal]').forEach((el) => io.observe(el));
+
+    const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+    const panels = tabs.map((t) => document.getElementById(t.getAttribute('aria-controls')));
+    function selectTab(nextIdx, focusTab) {
+      tabs.forEach((t, idx) => {
+        const active = idx === nextIdx;
+        t.setAttribute('aria-selected', active ? 'true' : 'false');
+        t.tabIndex = active ? 0 : -1;
+        if (panels[idx]) panels[idx].hidden = !active;
+      });
+      if (focusTab && tabs[nextIdx]) tabs[nextIdx].focus();
+    }
+    if (tabs.length) {
+      selectTab(0, false);
+      tabs.forEach((tab, idx) => {
+        tab.addEventListener('click', () => selectTab(idx, false));
+        tab.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+            e.preventDefault();
+            const dir = e.key === 'ArrowRight' ? 1 : -1;
+            selectTab((idx + dir + tabs.length) % tabs.length, true);
+          }
+        });
+      });
+    }
+  </script>
+</body>
+</html>
