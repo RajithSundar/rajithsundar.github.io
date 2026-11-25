@@ -1,6 +1,12 @@
 # Rajith Sundar — Portfolio (`rajithsundar.github.io`)
 
-Static engineering portfolio built with semantic HTML, OKLCH design tokens, and Indian Type Foundry typography (`Erode`, `Supreme`, and `Panchang`).
+Static engineering portfolio built in the **Obsidian Archive** aesthetic with semantic HTML, OKLCH design tokens, and Indian Type Foundry typography (`Clash Display` and `Satoshi`).
+
+## Featured Works
+
+- **Grantha Heritage Tracker** — Unsupervised thematic discovery across 13,358 scanned Indian books in eight scripts
+- **SwiftRAG (`SwiftVisa AI`)** — LangGraph + ChromaDB US and UK visa eligibility screening agent
+- **Vogue Trends** — Full-stack MERN storefront paired with a conversational Gemini 2.5 Flash stylist
 
 ## Local Preview
 
@@ -9,12 +15,3 @@ python -m http.server 8080
 ```
 
 Open `http://localhost:8080`.
-
-## Files
-
-- `index.html` — Portfolio markup and progressive tab/reveal script
-- `tokens.css` — OKLCH palette, spacing scale, and enlarged type ramp
-- `base.css` — Foundational reset, accessibility focus rings, and reduced-motion rules
-- `styles.css` — Page layout, responsive ledger tables, and Hallmark stamp
-- `assets/` — Portrait (`face.jpg`), live captured interfaces (`aeroscope.png`, `vogue-trends.png`), and 1-page resume (`Rajith_Sundar_Resume.pdf`)
-- `PRODUCT.md` & `DESIGN.md` — Product and visual system specifications

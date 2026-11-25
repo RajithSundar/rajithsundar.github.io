@@ -1,17 +1,16 @@
-# Design System: Mineral Ledger
+# Design System: Obsidian Archive
 
 ## Visual World
-An architectural field ledger set on cool mineral pewter paper (`oklch(96.2% 0.009 205)`) with deep graphite-slate ink (`oklch(18% 0.018 205)`) and a restrained deep botanical spruce signal (`oklch(39.5% 0.115 158)`) drawn from the sunlit foliage in Rajith's portrait.
+A dark, warm basalt exhibition space (`oklch(13.8% 0.01 58)`) with elevated stone bands (`oklch(17.8% 0.012 58)`), warm bone-ivory ink (`oklch(94.5% 0.01 75)`), and a sunlit saffron-ochre signal (`oklch(76.5% 0.145 68)`) echoing Indian palm-leaf manuscripts (`Grantha`) and golden-hour portrait light.
 
 ## Typography (Uncommon, Enlarged Scale)
 Served via Fontshare (Indian Type Foundry):
-- **Display (`--font-display`)**: `Erode` (weight `600`), stone-cut wedge serif set oversized (`--text-display` up to `5.4rem`, `--text-section` up to `3.75rem`, tight `-0.025em` tracking, `text-wrap: balance`).
-- **Body (`--font-body`)**: `Supreme` (weights `400` and `500`), clean Neo-Grotesk set slightly larger than standard web defaults (`19px` / `1.1875rem` body, `16px` / `1rem` metadata, `1.6` line-height, `text-wrap: pretty`).
-- **Outlier (`--font-outlier`)**: `Panchang` (weight `600`), reserved strictly for one role: the `.wordmark` in header and footer.
+- **Display (`--font-display`)**: `Clash Display` (`600`), sculptural geometric display face set oversized (`h1` up to `4.6rem`, `h2` up to `3.5rem`, `text-wrap: balance`).
+- **Body (`--font-body`)**: `Satoshi` (`400` and `500`), crisp modernist grotesk scaled up to `19px` (`1.1875rem`) body and `16px` (`1rem`) metadata with `1.62` leading tuned for dark surfaces.
 - **Weight discipline**: Strictly three weights across the entire document (`400`, `500`, `600`).
 
-## Anti-Slop Invariants
-- Zero eyebrows or tracked-caps labels; headings announce themselves in plain sentence case.
-- Zero middle-dot chains, `01/02` decorative counters, glued link arrows, pulsing dots, or em/en dashes in prose.
-- Zero gradient text, purple/cyan hues, warm beige defaults, side-stripe cards, or nested cards.
-- Surface ladder alternates cleanly across sections: mineral paper hero -> recessed stone band (`--color-paper-2`) interactive switcher -> full-width hairline repository table -> asymmetric split work history -> recessed academic record band -> calm statement colophon.
+## Main Works Architecture
+1. **Grantha Heritage Tracker**: 12-column asymmetric dual showcase (`7fr` 3D palm-leaf manuscript + `5fr` 13,358-book 3D archive map).
+2. **SwiftRAG (`SwiftVisa AI`)**: `5fr / 7fr` split featuring the live LangGraph + ChromaDB consultation audit screen.
+3. **Vogue Trends**: Mirrored `6fr / 6fr` split featuring the MERN + Gemini 2.5 Flash storefront.
+4. **Engineering Archive**: `2×2` hairlined grid covering `AeroScope`, `AgentOne`, `Englo Studio`, and `FinTrack Pro`.

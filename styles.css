@@ -1,9 +1,14 @@
-/* Hallmark · shape: Mineral Ledger · genre: editorial · theme: custom · job: hire · idea: "An engineer's field ledger on cool mineral pewter paper pairing stone-cut Erode heads with real captured software" · vibe: "Architectural, calm, tactile, mineral, oversized, unhurried"
- * paper: oklch(96.2% 0.009 205) · accent: oklch(39.5% 0.115 158) · display: Erode · body: Supreme · hero: Stage split with oversized Erode headline on seven columns and sunlit portrait on five · nav: edge-aligned wordmark with three quiet links and resume outline control · footer: closing statement over direct links and colophon · imagery: photographs and the product · signature: real interactive AeroScope and Vogue Trends captures beside an engineering repository ledger
- * axes: light/high-contrast-serif/chromatic-green · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
-/* Hallmark · pre-emit critique: P5 H5 E5 S4 R5 V5 · weakest: S, developer portfolios default to dark card grids; replaced cards with live captured screens and a full-width repository ledger */
+/* Hallmark · shape: Obsidian Archive · genre: atmospheric · theme: custom · job: hire · idea: "A dark warm basalt exhibition space spotlighting Grantha, SwiftRAG, and Vogue Trends as full-scale captured chapters" · vibe: "Warm obsidian, sculptural, archival, bold, tactile, unhurried"
+ * paper: oklch(13.8% 0.01 58) · accent: oklch(76.5% 0.145 68) · display: Clash Display · body: Satoshi · hero: Reversed Stage with sunlit portrait on five left columns and Clash Display headline on seven right columns · nav: edge-aligned wordmark with main-work anchors and resume outline control · footer: closing statement over direct links and colophon · imagery: photographs and the product · signature: dual full-bleed Grantha 3D manuscript and 13,358-book galaxy showcase leading three captured main works
+ * axes: dark/display-condensed/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 · weakest: R, cut extra repository rows into a clean two-by-two archive grid so the three main works own the page */
 @import url("./tokens.css");
 @import url("./base.css");
+
+body {
+  line-height: 1.62;
+  letter-spacing: 0.005em;
+}
 
 /* Skip link */
 .skip {
@@ -12,8 +17,8 @@
   top: calc(-1 * var(--space-3xl));
   z-index: var(--z-toast);
   padding: var(--space-xs) var(--space-md);
-  background: var(--color-ink);
-  color: var(--color-paper);
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
   border-radius: var(--radius-input);
   text-decoration: none;
 }
@@ -26,8 +31,8 @@
   position: sticky;
   top: 0;
   z-index: var(--z-sticky-nav);
-  background: color-mix(in oklab, var(--color-paper) 92%, transparent);
-  backdrop-filter: blur(10px);
+  background: color-mix(in oklab, var(--color-paper) 90%, transparent);
+  backdrop-filter: blur(12px);
   border-bottom: var(--rule-hair) solid var(--color-rule);
 }
 
@@ -40,10 +45,10 @@
 }
 
 .wordmark {
-  font-family: var(--font-outlier);
+  font-family: var(--font-display);
   font-weight: 600;
-  font-size: var(--text-md);
-  letter-spacing: -0.02em;
+  font-size: var(--text-lg);
+  letter-spacing: -0.015em;
   text-decoration: none;
   white-space: nowrap;
   color: var(--color-ink);
@@ -98,6 +103,7 @@
 .btn:hover {
   background: var(--color-ink);
   border-color: var(--color-ink);
+  color: var(--color-paper);
 }
 
 .btn:active {
@@ -136,17 +142,17 @@
 h1 {
   font-size: var(--text-display);
   font-weight: 600;
-  line-height: 1.03;
+  line-height: 1.04;
   letter-spacing: var(--tracking-display);
-  max-inline-size: 16ch;
+  max-inline-size: 15ch;
 }
 
 h2 {
   font-size: var(--text-section);
   font-weight: 600;
   line-height: 1.08;
-  letter-spacing: -0.02em;
-  max-inline-size: 24ch;
+  letter-spacing: -0.01em;
+  max-inline-size: 22ch;
 }
 
 h3 {
@@ -154,17 +160,17 @@ h3 {
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.015em;
-  max-inline-size: 32ch;
+  max-inline-size: 28ch;
 }
 
 .lead {
   font-size: var(--text-lead);
-  line-height: 1.5;
+  line-height: 1.55;
   color: var(--color-ink-2);
-  max-inline-size: 54ch;
+  max-inline-size: 52ch;
 }
 
-/* Hero: Stage posture, fits cleanly within 1280x800 and 1440x900 */
+/* Hero: Reversed Stage (Portrait Left 5fr / Headline Right 7fr) */
 .hero {
   min-height: calc(100svh - 73px);
   display: flex;
@@ -174,9 +180,27 @@ h3 {
 
 .intro-grid {
   display: grid;
-  grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
-  gap: var(--space-2xl);
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: var(--space-3xl);
   align-items: center;
+}
+
+.intro-portrait {
+  margin: 0;
+  height: clamp(480px, 68svh, 640px);
+  width: 100%;
+  border-radius: var(--radius-card);
+  background: var(--color-paper-2);
+}
+
+.intro-portrait > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  border-radius: var(--radius-card);
+  outline: var(--rule-hair) solid color-mix(in oklab, var(--color-ink) 14%, transparent);
+  outline-offset: -1px;
 }
 
 .intro-copy {
@@ -194,24 +218,6 @@ h3 {
   padding-top: var(--space-xs);
 }
 
-.intro-portrait {
-  margin: 0;
-  height: clamp(480px, 68svh, 640px);
-  width: 100%;
-  border-radius: var(--radius-card);
-  background: var(--color-paper-2);
-}
-
-.intro-portrait > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 22%;
-  border-radius: var(--radius-card);
-  outline: var(--rule-hair) solid color-mix(in oklab, var(--color-ink) 12%, transparent);
-  outline-offset: -1px;
-}
-
 /* One page-load settle for hero, visible with scripting off */
 .js [data-reveal] {
   opacity: 0;
@@ -225,17 +231,18 @@ h3 {
   transform: none;
 }
 
-/* Section rhythm: varied across seams */
-.band-stone {
+/* Varied section rhythm across the surface ladder */
+.band-elevated {
   background: var(--color-paper-2);
+  color: var(--color-ink);
   padding-block: var(--section-gap-s);
 }
 
-.section-ledger {
-  padding-block: var(--section-gap) var(--section-gap-l);
+.section-canvas {
+  padding-block: var(--section-gap);
 }
 
-.section-experience {
+.section-archive {
   padding-block: var(--section-gap) var(--section-gap-l);
   border-top: var(--rule-hair) solid var(--color-rule);
 }
@@ -255,99 +262,76 @@ h3 {
   margin-bottom: var(--space-2xl);
 }
 
-/* Interactive Switcher: real captured interfaces */
-.switcher-bar {
+/* Main Work 1: Grantha 12-column Showcase (7fr + 5fr asymmetric pair) */
+.showcase-pair {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: var(--gap-columns);
+  align-items: stretch;
+}
+
+.product-frame {
+  margin: 0;
+  aspect-ratio: 16 / 10;
+  min-height: 320px;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: var(--color-paper);
+  box-shadow: var(--shadow-card);
+}
+
+.product-frame > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  outline: var(--rule-hair) solid color-mix(in oklab, var(--color-ink) 12%, transparent);
+  outline-offset: -1px;
+}
+
+.showcase-foot {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-lg);
-  margin-bottom: var(--space-xl);
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: var(--rule-hair) solid var(--color-rule);
 }
 
-.tablist {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-xs);
-  padding: var(--space-2xs);
-  background: var(--color-paper-3);
-  border-radius: var(--radius-input);
-}
-
-.tab-btn {
-  min-height: 44px;
-  padding: 0 var(--space-lg);
-  border: var(--rule-hair) solid transparent;
-  border-radius: var(--radius-input);
-  background: transparent;
-  color: var(--color-ink-2);
-  font-family: var(--font-body);
-  font-size: var(--text-sm);
-  font-weight: 500;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out);
-}
-
-.tab-btn:hover {
-  color: var(--color-ink);
-}
-
-.tab-btn[aria-selected="true"] {
-  background: var(--color-paper);
-  color: var(--color-ink);
-  border-color: var(--color-rule);
-  box-shadow: var(--shadow-card);
-}
-
-.case-panel {
+/* Main Works 2 & 3: Alternating Splits (5/7 then 6/6) */
+.work-split {
   display: grid;
-  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
-  gap: var(--gap-columns);
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: var(--space-2xl);
   align-items: center;
 }
 
-.case-panel + .case-panel {
-  margin-top: var(--space-2xl);
+.work-split--reverse {
+  grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
 }
 
-.js .case-panel + .case-panel {
-  margin-top: 0;
-}
-
-.case-screen {
-  margin: 0;
-  aspect-ratio: 16 / 10;
-  border-radius: var(--radius-card);
-  overflow: hidden;
-  box-shadow: var(--shadow-card);
-}
-
-.case-screen > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  outline: var(--rule-hair) solid color-mix(in oklab, var(--color-ink) 10%, transparent);
-  outline-offset: -1px;
-}
-
-.case-details {
+.work-copy {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: var(--space-md);
 }
 
-.case-details p {
+.work-copy p {
   color: var(--color-ink-2);
-  line-height: 1.6;
 }
 
-.case-links {
+.stack-line {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.work-links {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-md);
+  gap: var(--space-lg);
   padding-top: var(--space-xs);
 }
 
@@ -356,144 +340,130 @@ h3 {
   font-weight: 500;
   color: var(--color-ink);
   text-decoration: underline;
-  text-decoration-color: var(--color-muted);
-  text-underline-offset: 0.2em;
-  transition: color var(--dur-micro) var(--ease-out), text-decoration-color var(--dur-micro) var(--ease-out);
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 0.22em;
+  transition: color var(--dur-micro) var(--ease-out);
 }
 
 .text-link:hover {
   color: var(--color-accent);
-  text-decoration-color: var(--color-accent);
 }
 
-/* Full-width Repository Table / Index */
-.repo-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-}
-
-.repo-table th {
-  font-family: var(--font-body);
-  font-size: var(--text-sm);
-  font-weight: 500;
-  color: var(--color-muted);
-  padding: 0 var(--space-md) var(--space-md) 0;
-  border-bottom: var(--rule-hair) solid var(--color-ink);
-  white-space: nowrap;
-}
-
-.repo-table td {
-  padding: var(--space-xl) var(--space-md) var(--space-xl) 0;
-  border-bottom: var(--rule-hair) solid var(--color-rule);
-  vertical-align: baseline;
-  font-size: var(--text-md);
-  line-height: 1.55;
-  font-variant-numeric: tabular-nums;
-  color: var(--color-ink-2);
-}
-
-.repo-table td:first-child {
-  font-family: var(--font-display);
-  font-size: var(--text-title);
-  font-weight: 600;
-  font-variant-numeric: tabular-nums;
-  color: var(--color-ink);
-  white-space: nowrap;
-  padding-right: var(--space-xl);
-}
-
-.repo-table td:last-child,
-.repo-table th:last-child {
-  padding-right: 0;
-  text-align: right;
-  white-space: nowrap;
-}
-
-.repo-stack {
-  font-size: var(--text-sm);
-  color: var(--color-muted);
-}
-
-/* Experience: Full-width three-row architectural ledger */
-.exp-list {
-  display: flex;
-  flex-direction: column;
+/* Secondary Engineering Archive: 2x2 Hairlined Architectural Grid */
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   border-top: var(--rule-hair) solid var(--color-ink);
 }
 
-.exp-item {
-  display: grid;
-  grid-template-columns: minmax(0, 4fr) minmax(0, 3fr) minmax(0, 5fr);
-  gap: var(--gap-columns);
-  padding-block: var(--space-xl);
+.archive-cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-md);
+  min-height: 240px;
+  padding: var(--space-xl) var(--space-xl) var(--space-xl) 0;
   border-bottom: var(--rule-hair) solid var(--color-rule);
-  align-items: baseline;
 }
 
-.exp-role {
-  font-weight: 500;
+.archive-cell:nth-child(even) {
+  padding-left: var(--space-xl);
+  padding-right: 0;
+  border-left: var(--rule-hair) solid var(--color-rule);
+}
+
+.archive-cell p {
+  color: var(--color-ink-2);
+}
+
+.archive-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+/* Experience & Verified Record */
+.record-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding-bottom: var(--space-2xl);
+  margin-bottom: var(--space-2xl);
+  border-bottom: var(--rule-hair) solid var(--color-rule);
+}
+
+.stat-col {
+  padding-inline: var(--space-xl);
+  border-left: var(--rule-hair) solid var(--color-rule);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.stat-col:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.stat-col:last-child {
+  padding-right: 0;
+}
+
+.stat-num {
+  font-family: var(--font-display);
+  font-size: var(--text-display-s);
+  font-weight: 600;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
   color: var(--color-ink);
 }
 
-.exp-meta {
+.stat-label {
+  font-size: var(--text-sm);
+  color: var(--color-ink-2);
+}
+
+.exp-rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-row {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 3fr) minmax(0, 5fr);
+  gap: var(--gap-columns);
+  padding-block: var(--space-lg);
+  border-top: var(--rule-hair) solid var(--color-rule);
+  align-items: baseline;
+}
+
+.exp-row:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.exp-row:last-child {
+  padding-bottom: 0;
+}
+
+.exp-org {
   display: flex;
   flex-direction: column;
   gap: var(--space-2xs);
 }
 
-.exp-meta time {
+.exp-org time {
   font-size: var(--text-sm);
   color: var(--color-muted);
 }
 
-.exp-body {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-}
-
-.exp-body p {
-  color: var(--color-ink-2);
-  line-height: 1.6;
-}
-
-/* Academic record & real figures */
-.stats-row {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.stats-item {
-  padding-inline: var(--space-xl);
-  border-left: var(--rule-hair) solid var(--color-rule);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-}
-
-.stats-item:first-child {
-  padding-left: 0;
-  border-left: 0;
-}
-
-.stats-item:last-child {
-  padding-right: 0;
-}
-
-.stats-figure {
-  font-family: var(--font-display);
-  font-size: var(--text-display-s);
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: -0.02em;
-  font-variant-numeric: tabular-nums;
+.exp-title {
+  font-weight: 500;
   color: var(--color-ink);
 }
 
-.stats-desc {
-  font-size: var(--text-md);
-  line-height: 1.55;
+.exp-note {
   color: var(--color-ink-2);
 }
 
@@ -509,10 +479,6 @@ h3 {
   align-items: flex-start;
   gap: var(--space-lg);
   padding-bottom: var(--space-3xl);
-}
-
-.footer-statement h2 {
-  max-inline-size: 20ch;
 }
 
 .footer-actions {
@@ -554,7 +520,7 @@ h3 {
   text-decoration: underline;
 }
 
-/* Responsive collapse under 60rem and 40rem */
+/* Responsive collapse */
 @media (max-width: 60rem) {
   .hero {
     min-height: auto;
@@ -563,73 +529,49 @@ h3 {
 
   .intro-grid,
   .head-split,
-  .case-panel,
-  .exp-grid,
-  .exp-item {
+  .showcase-pair,
+  .work-split,
+  .work-split--reverse,
+  .archive-grid,
+  .record-stats,
+  .exp-row {
     grid-template-columns: minmax(0, 1fr);
   }
 
   .intro-portrait {
+    order: 2;
     height: auto;
     aspect-ratio: 4 / 4.4;
     max-width: 440px;
     max-height: 480px;
   }
 
-  .stats-row {
-    grid-template-columns: minmax(0, 1fr);
+  .work-split--reverse .product-frame {
+    order: 2;
   }
 
-  .stats-item {
+  .product-frame {
+    min-height: 0;
+  }
+
+  .archive-cell,
+  .archive-cell:nth-child(even) {
+    min-height: 0;
     padding-inline: 0;
     padding-block: var(--space-lg);
+    border-left: 0;
+  }
+
+  .stat-col {
+    padding-inline: 0;
+    padding-block: var(--space-md);
     border-left: 0;
     border-top: var(--rule-hair) solid var(--color-rule);
   }
 
-  .stats-item:first-child {
+  .stat-col:first-child {
     padding-top: 0;
     border-top: 0;
-  }
-
-  .stats-item:last-child {
-    padding-bottom: 0;
-  }
-
-  /* Responsive table: stack cleanly on tablets/phones so zero columns clip (F25) */
-  .repo-table,
-  .repo-table tbody {
-    display: block;
-  }
-
-  .repo-table thead {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip-path: inset(50%);
-  }
-
-  .repo-table tr {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-xs);
-    padding-block: var(--space-lg);
-    border-bottom: var(--rule-hair) solid var(--color-rule);
-  }
-
-  .repo-table tr:first-child {
-    border-top: var(--rule-hair) solid var(--color-ink);
-  }
-
-  .repo-table td,
-  .repo-table td:first-child,
-  .repo-table td:last-child {
-    display: block;
-    padding: 0;
-    border: 0;
-    text-align: left;
-    white-space: normal;
   }
 }
 
@@ -638,8 +580,20 @@ h3 {
     display: none;
   }
 
+  .wordmark {
+    font-size: var(--text-md);
+  }
+
+  .nav-bar {
+    gap: var(--space-sm);
+  }
+
   .nav-links {
-    gap: var(--space-md);
+    gap: var(--space-sm);
+  }
+
+  .nav-bar .btn {
+    padding: 0 var(--space-md);
   }
 }
 

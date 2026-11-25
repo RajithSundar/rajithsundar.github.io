@@ -11,7 +11,7 @@
   --space-3xl: 96px;
   --space-4xl: 144px;
 
-  /* Enlarged, generous type scale (uncommon ITF faces, slightly bigger across all roles) */
+  /* Enlarged, generous type scale (Clash Display + Satoshi, slightly bigger across all roles) */
   --text-xs: 0.9375rem;
   --text-sm: 1rem;
   --text-md: 1.1875rem;
@@ -19,10 +19,10 @@
   --text-xl: 1.6875rem;
   --text-2xl: 2.125rem;
   --text-3xl: 2.625rem;
-  --text-display-s: clamp(2.4rem, 3.6vw + 0.85rem, 3.9rem);
-  --text-display: clamp(2.85rem, 4.3vw + 0.9rem, 4.75rem);
-  --text-section: clamp(2.35rem, 3vw + 1rem, 3.65rem);
-  --text-title: clamp(1.45rem, 0.85vw + 1.1rem, 1.95rem);
+  --text-display-s: clamp(2.35rem, 3.4vw + 0.85rem, 3.75rem);
+  --text-display: clamp(2.75rem, 4.1vw + 0.9rem, 4.6rem);
+  --text-section: clamp(2.25rem, 2.8vw + 1rem, 3.5rem);
+  --text-title: clamp(1.45rem, 0.85vw + 1.1rem, 1.9rem);
   --text-lead: clamp(1.25rem, 0.5vw + 1.05rem, 1.5625rem);
 
   /* Motion & curves */
@@ -49,32 +49,32 @@
   --z-toast: 500;
   --z-tooltip: 600;
 
-  /* Cool mineral pewter paper + deep botanical spruce signal (OKLCH) */
-  --color-paper: oklch(96.2% 0.009 205);
-  --color-paper-2: oklch(92.6% 0.012 205);
-  --color-paper-3: oklch(88.6% 0.015 205);
-  --color-ink: oklch(18% 0.018 205);
-  --color-ink-2: oklch(32.5% 0.016 205);
-  --color-muted: oklch(43% 0.015 205);
-  --color-rule: oklch(81.5% 0.014 205);
-  --color-accent: oklch(39.5% 0.115 158);
-  --color-accent-ink: oklch(97.5% 0.006 205);
-  --color-focus: oklch(42% 0.145 158);
-  --color-error: oklch(50% 0.18 27);
-  --color-success: oklch(45% 0.12 155);
+  /* Warm Obsidian Basalt + Sunlit Saffron-Ochre Signal (OKLCH) */
+  --color-paper: oklch(13.8% 0.01 58);
+  --color-paper-2: oklch(17.8% 0.012 58);
+  --color-paper-3: oklch(22% 0.014 58);
+  --color-ink: oklch(94.5% 0.01 75);
+  --color-ink-2: oklch(77% 0.012 75);
+  --color-muted: oklch(64% 0.012 75);
+  --color-rule: oklch(27% 0.012 58);
+  --color-accent: oklch(76.5% 0.145 68);
+  --color-accent-ink: oklch(14% 0.015 58);
+  --color-focus: oklch(78.5% 0.155 68);
+  --color-error: oklch(65% 0.18 27);
+  --color-success: oklch(68% 0.14 152);
 
-  /* Uncommon Indian Type Foundry trio: Erode (display), Supreme (body), Panchang (outlier wordmark) */
-  --font-display: "Erode", Georgia, serif;
-  --font-body: "Supreme", system-ui, -apple-system, sans-serif;
-  --font-outlier: "Panchang", system-ui, sans-serif;
+  /* Uncommon Indian Type Foundry pairing: Clash Display + Satoshi */
+  --font-display: "Clash Display", system-ui, sans-serif;
+  --font-body: "Satoshi", system-ui, -apple-system, sans-serif;
+  --font-outlier: var(--font-display);
 
   /* Radii & surfaces */
-  --radius-card: 6px;
+  --radius-card: 8px;
   --radius-input: 6px;
   --radius-pill: 999px;
   --rule-hair: 1px;
-  --shadow-card: 0 1px 2px oklch(18% 0.018 205 / 0.05);
-  --tracking-display: -0.025em;
+  --shadow-card: 0 2px 8px oklch(8% 0.01 58 / 0.35);
+  --tracking-display: -0.01em;
 }
 
 @media (max-width: 40rem) {
